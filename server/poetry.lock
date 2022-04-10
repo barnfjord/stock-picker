@@ -229,20 +229,6 @@ anyio = ">=3.0.0,<4"
 full = ["itsdangerous", "jinja2", "python-multipart", "pyyaml", "requests"]
 
 [[package]]
-name = "tiingo"
-version = "0.14.0"
-description = "REST Client for Tiingo Data Platform API"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-requests = "*"
-
-[package.extras]
-pandas = ["pandas (>=0.18)"]
-
-[[package]]
 name = "tomli"
 version = "2.0.1"
 description = "A lil' TOML parser"
@@ -290,7 +276,7 @@ standard = ["websockets (>=10.0)", "httptools (>=0.4.0)", "watchgod (>=0.6)", "p
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "0219fbc959d94e0d2272cb099ed43131268e4fabb593ff20d0a4ed677aa63768"
+content-hash = "f8061918d3cca8a74d8504028e19a615795a3acb0ae47f4c8e7eb8ae9f7505f3"
 
 [metadata.files]
 anyio = [
@@ -422,10 +408,6 @@ sniffio = [
 starlette = [
     {file = "starlette-0.17.1-py3-none-any.whl", hash = "sha256:26a18cbda5e6b651c964c12c88b36d9898481cd428ed6e063f5f29c418f73050"},
     {file = "starlette-0.17.1.tar.gz", hash = "sha256:57eab3cc975a28af62f6faec94d355a410634940f10b30d68d31cb5ec1b44ae8"},
-]
-tiingo = [
-    {file = "tiingo-0.14.0-py2.py3-none-any.whl", hash = "sha256:c14d370ef53e52a14b8d1a19f2ca64f49e19afb1090a737d67b5ed1b8b28b467"},
-    {file = "tiingo-0.14.0.tar.gz", hash = "sha256:cf15706c6f388f52c85d46efae0fa109200a571f95b0cc9361093902c62fac00"},
 ]
 tomli = [
     {file = "tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
