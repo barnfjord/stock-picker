@@ -4,8 +4,8 @@ import {
   BrowserRouter as Router
 } from 'react-router-dom';
 
+import { StockPage } from '../stocks-page/StockItem';
 import PageTemplate from './page-template/PageTemplate';
-import {HelloWorld} from './HelloWorld';
 
 function RootContainer(): JSX.Element {
 
@@ -13,7 +13,7 @@ function RootContainer(): JSX.Element {
     <Router>
       <PageTemplate>
         <Routes>
-          <Route path="/hello" element={<HelloWorld />} />
+          <Route path="/" element={<StockPage />} />
         </Routes>
       </ PageTemplate>
     </Router>

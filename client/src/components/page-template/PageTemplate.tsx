@@ -19,6 +19,7 @@ function PageTemplate({ children }: IPageTemplate): JSX.Element {
 export default PageTemplate;
 
 const Container = styled.div`
+  background-color: #eaeaea;
   main {
     padding: 0 24px;
     margin: 28px auto;
