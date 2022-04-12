@@ -26,17 +26,16 @@ def get_last_prices(tickers: list[str]):
     response = requests.get(
         f"https://api.tiingo.com/iex/?tickers={','.join(tickers)}&token={api_key}", headers=headers
     )
-    data = [
-        {
-            "ticker": ticker["ticker"],
-            "price": ticker["last"],
-            "change": (ticker["last"] / ticker["prevClose"]) - 1,  # Percent change
-            "ticks": get_historical_data(
-                ticker["ticker"], date.today()
-            ),  # TODO: Replace with data from db, set up db filling periodically
-        }
-        for ticker in response.json()
-    ]
+    data = []
+    for ticker in response.json():
+        ticks = get_historical_data(
+            ticker["ticker"], date.today()
+        )  # TODO: Replace with data from db, set up db filling periodically
+        change = (ticks[-1]["close"] - ticks[0]["close"]) / ticks[0]["close"]  # Percent change
+        data.append(
+            {"ticker": ticker["ticker"], "price": ticker["last"], "change": change, "ticks": ticks}
+        )
+
     return data
 
 
